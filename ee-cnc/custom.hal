@@ -1,0 +1,25 @@
+# Include your custom HAL commands here
+# This file will not be overwritten when you run PNCconf again
+
+
+# external output signals
+
+# --- COOLANT-MIST ---
+net coolant-mist hm2_5i25.0.7i76.0.0.output-00
+
+# --- DOUT-01 ---
+net dout-01 hm2_5i25.0.7i76.0.0.output-01
+net dout-01 <= motion.digital-out-01
+
+# external input signals
+
+# --- Toggle_Up_In ---
+net Toggle_Up_In    <=  hm2_5i25.0.7i76.0.0.input-13
+
+# --- Toggle_Down_In --
+net Toggle_Down_In    <=  hm2_5i25.0.7i76.0.0.input-14
+
+# --- FEED_HOLD_IN ---
+net Feed_Hold_In <= hm2_5i25.0.7i76.0.0.input-15-not
+net Feed_Hold_In => motion.feed-hold
+
