@@ -7,4 +7,4 @@ The current machine config for the primary cnc mill can be used by downloading t
     - Flashing the firmware in **hm2** to the 6i25 FPGA using *mesaflash* is required for proper operation
 
 ## Archive
-- **archive** contains info for older generations of the mill.
+- **archive** contains info for older generations of the mill
