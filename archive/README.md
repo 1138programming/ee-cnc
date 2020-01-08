@@ -1,4 +1,4 @@
-CNC Config Archive
+# Archive
 
 This archive folder contains the original config for the cnc mill when it was first converted to use LinuxCNC.  It contains historical wiring diagrams, configs, and other misc. documentation.
 
