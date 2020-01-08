@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pyvcp>
+	<vbox>
+		<relief>RIDGE</relief>         
+		<bd>6</bd>
+		<label>
+			<text>"Spindle Speed:"</text>
+			<font>("Helvetica",20)</font>
+		</label>
+		<bar>
+			<halpin>"spindle-speed"</halpin>
+			<max_>3600</max_>
+		</bar>
+	</vbox>
+<!-- the Hold Led -->
+	<hbox>
+		<relief>RAISED</relief>
+		<bd>2</bd>
+		<vbox>
+			<relief>RAISED</relief>
+			<bd>2</bd>
+			<label>
+				<text>"HOLD"</text>
+				<font>("Helvetica",18)</font>
+				<width>6</width>
+			</label>
+			<hbox>
+				<label width="2"/>
+				<rectled>
+					<halpin>"feedhold"</halpin>
+					<height>"40"</height>
+					<width>"80"</width>
+					<on_color>"orange"</on_color>
+					<off_color>"grey"</off_color>
+				</rectled>
+			</hbox>
+		</vbox>
+<!-- the Air Led -->
+		<vbox>
+			<relief>RAISED</relief>
+			<bd>2</bd>
+			<label>
+				<text>"   AIR   "</text>
+				<font>("Helvetica",18)</font>
+				<width>4</width>
+			</label>
+			<!--	<label width="2"/>  -->
+			<rectled>
+				<halpin>"airpresure"</halpin>
+				<height>"40"</height>
+				<width>"90"</width>
+				<on_color>"green"</on_color>
+				<off_color>"red"</off_color>
+			</rectled>
+		</vbox>
+	</hbox>
+
+</pyvcp>

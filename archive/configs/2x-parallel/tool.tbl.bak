@@ -1,0 +1,48 @@
+T1 P1 Z-3.8596 D0.1094 ;.1094 center drill 
+T2 P2 Z-2.46954 D0.25 ;.25 drill 
+T3 P3 Z-3.73899 D0.0625 ;0.0625" end mill 
+T4 P4 Z-3.32581 D0.1719 ;11/64 2 flute end mill 
+T5 P5 Z-2.47316 D0.02 ;engraver bit 
+T6 P6 Z-0.436047 D0.5 ;added 20120510 
+T7 P7 Z0.45355 D0.136 ;#29 twist drill 
+T8 P8 Z2.35856 D0.106 ;#36 twist drill 
+T9 P9 Z-0.67717 D0.266 ;h drill for 1/4-20 clearence 
+T10 P10 Z-1.76868 D0.25 ;.25 x 1.75 end mill 
+T11 P11 Z-1.53224 D0.625 ;5/8 2 flute end mill 
+T12 P12 Z-2.14019 D0.375 ;3/8 2 flute end mill 
+T13 P13 Z-3.13056 D0.25 ;1/4" 2flute end mill  .375"cutting 
+T14 P14 Z-3.11673 D0.081 ;0.081 drill 
+T15 P15 Z-2.17379 D0.125 ;0.125 1" end mill 4 flute 
+T16 P16 Z-1.04326 D0.213 ;twist drill  size #3   .213 dia 
+T17 P17 Z-2.50899 D0.125 ;0.125" twist drill 
+T18 P18 Z-2.42304 D0.25 ;0.25" 4 flute end mill 
+T19 P19 Z-1.15327 D0.257 ;#f twist drill 
+T20 P20 Z-3.15856 D0.404 ;0.4040 2flute hss end mill 
+T21 P21 Z-2.03503 D0.75 ;0.75" 2flute tin end mill 
+T22 P22 Z-2.29235 D0.6875 ;11/16 2flute end mill tin 
+T23 P23 Z-0.773125 D0.193 ;#10 twist drill 
+T24 P24 Z-0.355412 D0.196 ;#9 twist drill 
+T25 P25 Z-2.201 D0.437 ;7/16 4flute end mill 
+T26 P26 Z-1.28468 D0.203 ;13/64 2 flute end mill 
+T27 P27 Z-0.67568 D0.18 ;#15 twist drill 
+T28 P28 Z-3.04571 D0.1705 ;0.1705 2flute end mill 
+T29 P29 Z-2.18137 D0.201 ;#7 0.201 twist drill 
+T30 P30 D0.375 ;3/8 twist drill 
+T31 P31 Z-3.09355 D0.046875 ;no1 center drill 
+T32 P32 Z-2.43109 D0.089 ;#43 twist drill 
+T33 P33 Z-2.48343 D0.063 ;#52 twist drill 
+T34 P34 Z-2.80701 D0.096 ;#41 twist drill 
+T54 P54 Z-1.47849 D0.159 ;#21 drill bit 
+T35 P35 Z-2.55347 D0.113 ;#33 twist drill 
+T0 P0 ;t0 tool (no tool) 
+T40 P40 Z-3.15647 D0.0785 ;#47 twist drill 
+T41 P41 Z-3.36388 D0.09375 ;3/32 2 flute end mill 
+T36 P36 Z-3.43348 D0.125 ;1/8" 2 flute end mill 
+T42 P42 Z-2.75637 D0.5 ;1/2" 4 flute fine roughing end mill 
+T43 P43 Z-2.99984 D0.25 ;1/4" 3 flute fine roughing end mill 
+T49 P49 D0.125 ;1/8" 2flute ball end mill 
+T50 P50 Z-2.86891 D0.1 ;.100 inch 3 flute flat end mill 
+T52 P52 Z-2.66808 D0.25 ;.25" flat 4 flute end mill 
+T53 P53 D0.1875 ;.1875 2 flute flat end mill  2"loc 
+T55 P55 Z-1.8108 D0.1875 ;3/16" twist  drill 
+T56 P56 Z-2.75577 D0.5 ;.5" 3 flute flat end mill 1.25"loc 

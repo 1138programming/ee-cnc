@@ -1,0 +1,882 @@
+Loaded HAL Components:
+ID      Type  Name                                            PID   State
+    22  User  halcmd3823                                       3823 ready
+    25  User  probe                                            3477 initializing
+    24  User  gladevcp                                         3477 ready
+    20  User  axisui                                           3425 ready
+    18  User  inihal                                           3412 ready
+    17  User  hal_manualtoolchange                             3406 ready
+    15  RT    charge_pump                                           ready
+    14  RT    abs                                                   ready
+    13  RT    stepgen                                               ready
+    12  RT    hal_parport                                           ready
+    11  RT    __servo-thread                                        ready
+    10  RT    __base-thread                                         ready
+     9  RT    motmod                                                ready
+     8  RT    trivkins                                              ready
+     7  User  halui                                            3394 ready
+     5  User  iocontrol                                        3392 ready
+
+Component Pins:
+Owner   Type  Dir         Value  Name
+    14  float IN              0  abs.0.in <== spindle-cmd
+    14  bit   OUT         FALSE  abs.0.is-negative
+    14  bit   OUT         FALSE  abs.0.is-positive
+    14  float OUT             0  abs.0.out ==> absolute-spindle-vel
+    14  bit   OUT         FALSE  abs.0.sign
+    14  s32   OUT           290  abs.0.time
+     9  bit   OUT          TRUE  axis.0.active
+     9  bit   OUT         FALSE  axis.0.amp-enable-out ==> xenable
+     9  bit   IN          FALSE  axis.0.amp-fault-in
+     9  float OUT             0  axis.0.backlash-corr
+     9  float OUT             0  axis.0.backlash-filt
+     9  float OUT             0  axis.0.backlash-vel
+     9  float OUT             0  axis.0.coarse-pos-cmd
+     9  bit   OUT         FALSE  axis.0.error
+     9  float OUT             0  axis.0.f-error
+     9  float OUT          0.01  axis.0.f-error-lim
+     9  bit   OUT         FALSE  axis.0.f-errored
+     9  bit   OUT         FALSE  axis.0.faulted
+     9  float OUT             0  axis.0.free-pos-cmd
+     9  bit   OUT         FALSE  axis.0.free-tp-enable
+     9  float OUT             0  axis.0.free-vel-lim
+     9  s32   OUT             0  axis.0.home-state
+     9  bit   IN          FALSE  axis.0.home-sw-in <== both-home-x
+     9  bit   OUT         FALSE  axis.0.homed
+     9  bit   OUT         FALSE  axis.0.homing
+     9  bit   OUT          TRUE  axis.0.in-position
+     9  bit   I/O         FALSE  axis.0.index-enable
+     9  s32   IN              0  axis.0.jog-counts
+     9  bit   IN          FALSE  axis.0.jog-enable
+     9  float IN              0  axis.0.jog-scale
+     9  bit   IN          FALSE  axis.0.jog-vel-mode
+     9  float OUT            15  axis.0.joint-pos-cmd
+     9  float OUT            15  axis.0.joint-pos-fb
+     9  float OUT             0  axis.0.joint-vel-cmd
+     9  bit   OUT         FALSE  axis.0.kb-jog-active
+     9  float OUT           -15  axis.0.motor-offset
+     9  float OUT             0  axis.0.motor-pos-cmd ==> xpos-cmd
+     9  float IN              0  axis.0.motor-pos-fb <== xpos-fb
+     9  bit   OUT         FALSE  axis.0.neg-hard-limit
+     9  bit   IN          FALSE  axis.0.neg-lim-sw-in <== both-home-x
+     9  bit   OUT         FALSE  axis.0.pos-hard-limit
+     9  bit   IN          FALSE  axis.0.pos-lim-sw-in <== both-home-x
+     9  bit   OUT         FALSE  axis.0.wheel-jog-active
+     9  bit   OUT          TRUE  axis.1.active
+     9  bit   OUT         FALSE  axis.1.amp-enable-out ==> yenable
+     9  bit   IN          FALSE  axis.1.amp-fault-in
+     9  float OUT             0  axis.1.backlash-corr
+     9  float OUT             0  axis.1.backlash-filt
+     9  float OUT             0  axis.1.backlash-vel
+     9  float OUT             0  axis.1.coarse-pos-cmd
+     9  bit   OUT         FALSE  axis.1.error
+     9  float OUT             0  axis.1.f-error
+     9  float OUT          0.01  axis.1.f-error-lim
+     9  bit   OUT         FALSE  axis.1.f-errored
+     9  bit   OUT         FALSE  axis.1.faulted
+     9  float OUT             0  axis.1.free-pos-cmd
+     9  bit   OUT         FALSE  axis.1.free-tp-enable
+     9  float OUT             0  axis.1.free-vel-lim
+     9  s32   OUT             0  axis.1.home-state
+     9  bit   IN          FALSE  axis.1.home-sw-in <== both-home-y
+     9  bit   OUT         FALSE  axis.1.homed
+     9  bit   OUT         FALSE  axis.1.homing
+     9  bit   OUT          TRUE  axis.1.in-position
+     9  bit   I/O         FALSE  axis.1.index-enable
+     9  s32   IN              0  axis.1.jog-counts
+     9  bit   IN          FALSE  axis.1.jog-enable
+     9  float IN              0  axis.1.jog-scale
+     9  bit   IN          FALSE  axis.1.jog-vel-mode
+     9  float OUT             7  axis.1.joint-pos-cmd
+     9  float OUT             7  axis.1.joint-pos-fb
+     9  float OUT             0  axis.1.joint-vel-cmd
+     9  bit   OUT         FALSE  axis.1.kb-jog-active
+     9  float OUT            -7  axis.1.motor-offset
+     9  float OUT             0  axis.1.motor-pos-cmd ==> ypos-cmd
+     9  float IN              0  axis.1.motor-pos-fb <== ypos-fb
+     9  bit   OUT         FALSE  axis.1.neg-hard-limit
+     9  bit   IN          FALSE  axis.1.neg-lim-sw-in <== both-home-y
+     9  bit   OUT         FALSE  axis.1.pos-hard-limit
+     9  bit   IN          FALSE  axis.1.pos-lim-sw-in <== both-home-y
+     9  bit   OUT         FALSE  axis.1.wheel-jog-active
+     9  bit   OUT          TRUE  axis.2.active
+     9  bit   OUT         FALSE  axis.2.amp-enable-out ==> zenable
+     9  bit   IN          FALSE  axis.2.amp-fault-in
+     9  float OUT             0  axis.2.backlash-corr
+     9  float OUT             0  axis.2.backlash-filt
+     9  float OUT             0  axis.2.backlash-vel
+     9  float OUT             0  axis.2.coarse-pos-cmd
+     9  bit   OUT         FALSE  axis.2.error
+     9  float OUT             0  axis.2.f-error
+     9  float OUT          0.01  axis.2.f-error-lim
+     9  bit   OUT         FALSE  axis.2.f-errored
+     9  bit   OUT         FALSE  axis.2.faulted
+     9  float OUT             0  axis.2.free-pos-cmd
+     9  bit   OUT         FALSE  axis.2.free-tp-enable
+     9  float OUT             0  axis.2.free-vel-lim
+     9  s32   OUT             0  axis.2.home-state
+     9  bit   IN          FALSE  axis.2.home-sw-in <== both-home-z
+     9  bit   OUT         FALSE  axis.2.homed
+     9  bit   OUT         FALSE  axis.2.homing
+     9  bit   OUT          TRUE  axis.2.in-position
+     9  bit   I/O         FALSE  axis.2.index-enable
+     9  s32   IN              0  axis.2.jog-counts
+     9  bit   IN          FALSE  axis.2.jog-enable
+     9  float IN              0  axis.2.jog-scale
+     9  bit   IN          FALSE  axis.2.jog-vel-mode
+     9  float OUT  -9.978935e-09  axis.2.joint-pos-cmd
+     9  float OUT  -9.978935e-09  axis.2.joint-pos-fb
+     9  float OUT             0  axis.2.joint-vel-cmd
+     9  bit   OUT         FALSE  axis.2.kb-jog-active
+     9  float OUT  9.978935e-09  axis.2.motor-offset
+     9  float OUT             0  axis.2.motor-pos-cmd ==> zpos-cmd
+     9  float IN              0  axis.2.motor-pos-fb <== zpos-fb
+     9  bit   OUT         FALSE  axis.2.neg-hard-limit
+     9  bit   IN          FALSE  axis.2.neg-lim-sw-in <== both-home-z
+     9  bit   OUT         FALSE  axis.2.pos-hard-limit
+     9  bit   IN          FALSE  axis.2.pos-lim-sw-in <== both-home-z
+     9  bit   OUT         FALSE  axis.2.wheel-jog-active
+    20  bit   OUT         FALSE  axisui.jog.a
+    20  bit   OUT         FALSE  axisui.jog.b
+    20  bit   OUT         FALSE  axisui.jog.c
+    20  float OUT             0  axisui.jog.increment
+    20  bit   OUT         FALSE  axisui.jog.u
+    20  bit   OUT         FALSE  axisui.jog.v
+    20  bit   OUT         FALSE  axisui.jog.w
+    20  bit   OUT          TRUE  axisui.jog.x
+    20  bit   OUT         FALSE  axisui.jog.y
+    20  bit   OUT         FALSE  axisui.jog.z
+    20  bit   IN          FALSE  axisui.notifications-clear
+    20  bit   IN          FALSE  axisui.notifications-clear-error
+    20  bit   IN          FALSE  axisui.notifications-clear-info
+    20  bit   IN          FALSE  axisui.resume-inhibit
+    10  s32   OUT         18000  base-thread.time
+    15  bit   IN           TRUE  charge-pump.enable
+    15  bit   OUT         FALSE  charge-pump.out ==> charge-pump
+    15  bit   OUT          TRUE  charge-pump.out-2
+    15  bit   OUT         FALSE  charge-pump.out-4
+    15  s32   OUT           330  charge-pump.time
+    24  bit   IN          FALSE  gladevcp.hal_led_auto_rott
+    24  bit   IN          FALSE  gladevcp.hal_led_set_zero
+    17  bit   IN          FALSE  hal_manualtoolchange.change <== tool-change
+    17  bit   IN          FALSE  hal_manualtoolchange.change_button
+    17  bit   OUT         FALSE  hal_manualtoolchange.changed ==> tool-changed
+    17  s32   IN              0  hal_manualtoolchange.number <== tool-number
+     7  bit   IN          FALSE  halui.abort
+     7  float OUT            15  halui.axis.0.pos-commanded
+     7  float OUT            15  halui.axis.0.pos-feedback
+     7  float OUT         15.01  halui.axis.0.pos-relative
+     7  float OUT             7  halui.axis.1.pos-commanded
+     7  float OUT             7  halui.axis.1.pos-feedback
+     7  float OUT          7.01  halui.axis.1.pos-relative
+     7  float OUT  -9.978935e-09  halui.axis.2.pos-commanded
+     7  float OUT  -9.978935e-09  halui.axis.2.pos-feedback
+     7  float OUT  -9.978935e-09  halui.axis.2.pos-relative
+     7  float OUT             0  halui.axis.3.pos-commanded
+     7  float OUT             0  halui.axis.3.pos-feedback
+     7  float OUT             0  halui.axis.3.pos-relative
+     7  float OUT             0  halui.axis.4.pos-commanded
+     7  float OUT             0  halui.axis.4.pos-feedback
+     7  float OUT             0  halui.axis.4.pos-relative
+     7  float OUT             0  halui.axis.5.pos-commanded
+     7  float OUT             0  halui.axis.5.pos-feedback
+     7  float OUT             0  halui.axis.5.pos-relative
+     7  float OUT             0  halui.axis.6.pos-commanded
+     7  float OUT             0  halui.axis.6.pos-feedback
+     7  float OUT             0  halui.axis.6.pos-relative
+     7  float OUT             0  halui.axis.7.pos-commanded
+     7  float OUT             0  halui.axis.7.pos-feedback
+     7  float OUT             0  halui.axis.7.pos-relative
+     7  float OUT             0  halui.axis.8.pos-commanded
+     7  float OUT             0  halui.axis.8.pos-feedback
+     7  float OUT             0  halui.axis.8.pos-relative
+     7  bit   IN          FALSE  halui.estop.activate
+     7  bit   OUT         FALSE  halui.estop.is-activated
+     7  bit   IN          FALSE  halui.estop.reset
+     7  bit   IN           TRUE  halui.feed-override.count-enable
+     7  s32   IN              0  halui.feed-override.counts
+     7  bit   IN          FALSE  halui.feed-override.decrease
+     7  bit   IN          FALSE  halui.feed-override.direct-value
+     7  bit   IN          FALSE  halui.feed-override.increase
+     7  float IN            0.1  halui.feed-override.scale
+     7  float OUT             1  halui.feed-override.value
+     7  bit   OUT         FALSE  halui.flood.is-on
+     7  bit   IN          FALSE  halui.flood.off
+     7  bit   IN          FALSE  halui.flood.on
+     7  bit   IN          FALSE  halui.home-all
+     7  float IN            0.2  halui.jog-deadband
+     7  float IN              0  halui.jog-speed
+     7  float IN              0  halui.jog.0.analog
+     7  float IN              0  halui.jog.0.increment
+     7  bit   IN          FALSE  halui.jog.0.increment-minus
+     7  bit   IN          FALSE  halui.jog.0.increment-plus
+     7  bit   IN          FALSE  halui.jog.0.minus
+     7  bit   IN          FALSE  halui.jog.0.plus
+     7  float IN              0  halui.jog.1.analog
+     7  float IN              0  halui.jog.1.increment
+     7  bit   IN          FALSE  halui.jog.1.increment-minus
+     7  bit   IN          FALSE  halui.jog.1.increment-plus
+     7  bit   IN          FALSE  halui.jog.1.minus
+     7  bit   IN          FALSE  halui.jog.1.plus
+     7  float IN              0  halui.jog.2.analog
+     7  float IN              0  halui.jog.2.increment
+     7  bit   IN          FALSE  halui.jog.2.increment-minus
+     7  bit   IN          FALSE  halui.jog.2.increment-plus
+     7  bit   IN          FALSE  halui.jog.2.minus
+     7  bit   IN          FALSE  halui.jog.2.plus
+     7  float IN              0  halui.jog.selected.increment
+     7  bit   IN          FALSE  halui.jog.selected.increment-minus
+     7  bit   IN          FALSE  halui.jog.selected.increment-plus
+     7  bit   IN          FALSE  halui.jog.selected.minus
+     7  bit   IN          FALSE  halui.jog.selected.plus
+     7  bit   OUT         FALSE  halui.joint.0.has-fault
+     7  bit   IN          FALSE  halui.joint.0.home
+     7  bit   OUT         FALSE  halui.joint.0.is-homed
+     7  bit   OUT         FALSE  halui.joint.0.is-selected
+     7  bit   OUT         FALSE  halui.joint.0.on-hard-max-limit
+     7  bit   OUT         FALSE  halui.joint.0.on-hard-min-limit
+     7  bit   OUT         FALSE  halui.joint.0.on-soft-max-limit
+     7  bit   OUT         FALSE  halui.joint.0.on-soft-min-limit
+     7  bit   IN          FALSE  halui.joint.0.select
+     7  bit   IN          FALSE  halui.joint.0.unhome
+     7  bit   OUT         FALSE  halui.joint.1.has-fault
+     7  bit   IN          FALSE  halui.joint.1.home
+     7  bit   OUT         FALSE  halui.joint.1.is-homed
+     7  bit   OUT         FALSE  halui.joint.1.is-selected
+     7  bit   OUT         FALSE  halui.joint.1.on-hard-max-limit
+     7  bit   OUT         FALSE  halui.joint.1.on-hard-min-limit
+     7  bit   OUT         FALSE  halui.joint.1.on-soft-max-limit
+     7  bit   OUT         FALSE  halui.joint.1.on-soft-min-limit
+     7  bit   IN          FALSE  halui.joint.1.select
+     7  bit   IN          FALSE  halui.joint.1.unhome
+     7  bit   OUT         FALSE  halui.joint.2.has-fault
+     7  bit   IN          FALSE  halui.joint.2.home
+     7  bit   OUT         FALSE  halui.joint.2.is-homed
+     7  bit   OUT         FALSE  halui.joint.2.is-selected
+     7  bit   OUT         FALSE  halui.joint.2.on-hard-max-limit
+     7  bit   OUT         FALSE  halui.joint.2.on-hard-min-limit
+     7  bit   OUT         FALSE  halui.joint.2.on-soft-max-limit
+     7  bit   OUT         FALSE  halui.joint.2.on-soft-min-limit
+     7  bit   IN          FALSE  halui.joint.2.select
+     7  bit   IN          FALSE  halui.joint.2.unhome
+     7  u32   OUT    0x00000000  halui.joint.selected
+     7  bit   OUT         FALSE  halui.joint.selected.has-fault
+     7  bit   IN          FALSE  halui.joint.selected.home
+     7  bit   OUT         FALSE  halui.joint.selected.is_homed
+     7  bit   OUT         FALSE  halui.joint.selected.on-hard-max-limit
+     7  bit   OUT         FALSE  halui.joint.selected.on-hard-min-limit
+     7  bit   OUT         FALSE  halui.joint.selected.on-soft-limit
+     7  bit   OUT         FALSE  halui.joint.selected.on-soft-min-limit
+     7  bit   IN          FALSE  halui.joint.selected.unhome
+     7  bit   OUT         FALSE  halui.lube.is-on
+     7  bit   IN          FALSE  halui.lube.off
+     7  bit   IN          FALSE  halui.lube.on
+     7  bit   OUT         FALSE  halui.machine.is-on
+     7  bit   IN          FALSE  halui.machine.off
+     7  bit   IN          FALSE  halui.machine.on
+     7  bit   IN           TRUE  halui.max-velocity.count-enable
+     7  s32   IN              0  halui.max-velocity.counts
+     7  bit   IN          FALSE  halui.max-velocity.decrease
+     7  bit   IN          FALSE  halui.max-velocity.direct-value
+     7  bit   IN          FALSE  halui.max-velocity.increase
+     7  float IN              0  halui.max-velocity.scale
+     7  float OUT      1.666667  halui.max-velocity.value
+     7  bit   OUT         FALSE  halui.mist.is-on
+     7  bit   IN          FALSE  halui.mist.off
+     7  bit   IN          FALSE  halui.mist.on
+     7  bit   IN          FALSE  halui.mode.auto
+     7  bit   OUT          TRUE  halui.mode.is-auto
+     7  bit   OUT         FALSE  halui.mode.is-joint
+     7  bit   OUT         FALSE  halui.mode.is-manual
+     7  bit   OUT         FALSE  halui.mode.is-mdi
+     7  bit   OUT         FALSE  halui.mode.is-teleop
+     7  bit   IN          FALSE  halui.mode.joint
+     7  bit   IN          FALSE  halui.mode.manual
+     7  bit   IN          FALSE  halui.mode.mdi
+     7  bit   IN          FALSE  halui.mode.teleop
+     7  bit   OUT          TRUE  halui.program.block-delete.is-on
+     7  bit   IN          FALSE  halui.program.block-delete.off
+     7  bit   IN          FALSE  halui.program.block-delete.on
+     7  bit   OUT          TRUE  halui.program.is-idle
+     7  bit   OUT         FALSE  halui.program.is-paused
+     7  bit   OUT         FALSE  halui.program.is-running ==> pgmrun1
+     7  bit   OUT         FALSE  halui.program.optional-stop.is-on
+     7  bit   IN          FALSE  halui.program.optional-stop.off
+     7  bit   IN          FALSE  halui.program.optional-stop.on
+     7  bit   IN          FALSE  halui.program.pause
+     7  bit   IN          FALSE  halui.program.resume
+     7  bit   IN          FALSE  halui.program.run
+     7  bit   IN          FALSE  halui.program.step
+     7  bit   IN          FALSE  halui.program.stop
+     7  bit   IN           TRUE  halui.rapid-override.count-enable
+     7  s32   IN              0  halui.rapid-override.counts
+     7  bit   IN          FALSE  halui.rapid-override.decrease
+     7  bit   IN          FALSE  halui.rapid-override.direct-value
+     7  bit   IN          FALSE  halui.rapid-override.increase
+     7  float IN            0.1  halui.rapid-override.scale
+     7  float OUT             1  halui.rapid-override.value
+     7  bit   IN           TRUE  halui.spindle-override.count-enable
+     7  s32   IN              0  halui.spindle-override.counts
+     7  bit   IN          FALSE  halui.spindle-override.decrease
+     7  bit   IN          FALSE  halui.spindle-override.direct-value
+     7  bit   IN          FALSE  halui.spindle-override.increase
+     7  float IN            0.1  halui.spindle-override.scale
+     7  float OUT             1  halui.spindle-override.value
+     7  bit   OUT          TRUE  halui.spindle.brake-is-on
+     7  bit   IN          FALSE  halui.spindle.brake-off
+     7  bit   IN          FALSE  halui.spindle.brake-on
+     7  bit   IN          FALSE  halui.spindle.decrease
+     7  bit   IN          FALSE  halui.spindle.forward <== cw
+     7  bit   IN          FALSE  halui.spindle.increase
+     7  bit   OUT         FALSE  halui.spindle.is-on
+     7  bit   IN          FALSE  halui.spindle.reverse <== ccw
+     7  bit   OUT         FALSE  halui.spindle.runs-backward
+     7  bit   OUT         FALSE  halui.spindle.runs-forward
+     7  bit   IN          FALSE  halui.spindle.start
+     7  bit   IN          FALSE  halui.spindle.stop
+     7  float OUT             0  halui.tool.length_offset.a
+     7  float OUT             0  halui.tool.length_offset.b
+     7  float OUT             0  halui.tool.length_offset.c
+     7  float OUT             0  halui.tool.length_offset.u
+     7  float OUT             0  halui.tool.length_offset.v
+     7  float OUT             0  halui.tool.length_offset.w
+     7  float OUT             0  halui.tool.length_offset.x
+     7  float OUT             0  halui.tool.length_offset.y
+     7  float OUT             0  halui.tool.length_offset.z
+     7  u32   OUT    0x00000000  halui.tool.number
+    18  float IN              0  ini.0.backlash
+    18  float IN           0.05  ini.0.ferror
+    18  float IN              8  ini.0.max_acceleration
+    18  float IN           24.1  ini.0.max_limit
+    18  float IN           1.67  ini.0.max_velocity
+    18  float IN           0.01  ini.0.min_ferror
+    18  float IN          -0.01  ini.0.min_limit
+    18  float IN              0  ini.1.backlash
+    18  float IN           0.05  ini.1.ferror
+    18  float IN             12  ini.1.max_acceleration
+    18  float IN           11.8  ini.1.max_limit
+    18  float IN           1.67  ini.1.max_velocity
+    18  float IN           0.01  ini.1.min_ferror
+    18  float IN          -0.01  ini.1.min_limit
+    18  float IN              0  ini.2.backlash
+    18  float IN           0.05  ini.2.ferror
+    18  float IN             12  ini.2.max_acceleration
+    18  float IN          0.005  ini.2.max_limit
+    18  float IN            1.3  ini.2.max_velocity
+    18  float IN           0.01  ini.2.min_ferror
+    18  float IN          -4.25  ini.2.min_limit
+    18  float IN              0  ini.3.backlash
+    18  float IN              0  ini.3.ferror
+    18  float IN              0  ini.3.max_acceleration
+    18  float IN              0  ini.3.max_limit
+    18  float IN              0  ini.3.max_velocity
+    18  float IN              0  ini.3.min_ferror
+    18  float IN              0  ini.3.min_limit
+    18  float IN              0  ini.4.backlash
+    18  float IN              0  ini.4.ferror
+    18  float IN              0  ini.4.max_acceleration
+    18  float IN              0  ini.4.max_limit
+    18  float IN              0  ini.4.max_velocity
+    18  float IN              0  ini.4.min_ferror
+    18  float IN              0  ini.4.min_limit
+    18  float IN              0  ini.5.backlash
+    18  float IN              0  ini.5.ferror
+    18  float IN              0  ini.5.max_acceleration
+    18  float IN              0  ini.5.max_limit
+    18  float IN              0  ini.5.max_velocity
+    18  float IN              0  ini.5.min_ferror
+    18  float IN              0  ini.5.min_limit
+    18  float IN              0  ini.6.backlash
+    18  float IN              0  ini.6.ferror
+    18  float IN              0  ini.6.max_acceleration
+    18  float IN              0  ini.6.max_limit
+    18  float IN              0  ini.6.max_velocity
+    18  float IN              0  ini.6.min_ferror
+    18  float IN              0  ini.6.min_limit
+    18  float IN              0  ini.7.backlash
+    18  float IN              0  ini.7.ferror
+    18  float IN              0  ini.7.max_acceleration
+    18  float IN              0  ini.7.max_limit
+    18  float IN              0  ini.7.max_velocity
+    18  float IN              0  ini.7.min_ferror
+    18  float IN              0  ini.7.min_limit
+    18  float IN              0  ini.8.backlash
+    18  float IN              0  ini.8.ferror
+    18  float IN              0  ini.8.max_acceleration
+    18  float IN              0  ini.8.max_limit
+    18  float IN              0  ini.8.max_velocity
+    18  float IN              0  ini.8.min_ferror
+    18  float IN              0  ini.8.min_limit
+    18  bit   IN           TRUE  ini.traj_arc_blend_enable
+    18  bit   IN          FALSE  ini.traj_arc_blend_fallback_enable
+    18  float IN              4  ini.traj_arc_blend_gap_cycles
+    18  s32   IN             50  ini.traj_arc_blend_optimization_depth
+    18  float IN             20  ini.traj_arc_blend_ramp_freq
+    18  float IN            0.1  ini.traj_arc_blend_tangent_kink_ratio
+    18  float IN          1e+99  ini.traj_default_acceleration
+    18  float IN           0.15  ini.traj_default_velocity
+    18  float IN             20  ini.traj_max_acceleration
+    18  float IN           1.67  ini.traj_max_velocity
+     5  bit   OUT         FALSE  iocontrol.0.coolant-flood ==> coolant-flood
+     5  bit   OUT         FALSE  iocontrol.0.coolant-mist ==> coolant-mist
+     5  bit   IN           TRUE  iocontrol.0.emc-enable-in <== estop-ext
+     5  bit   OUT         FALSE  iocontrol.0.lube
+     5  bit   IN          FALSE  iocontrol.0.lube_level
+     5  bit   OUT         FALSE  iocontrol.0.tool-change ==> tool-change
+     5  bit   IN          FALSE  iocontrol.0.tool-changed <== tool-changed
+     5  s32   OUT             0  iocontrol.0.tool-number
+     5  s32   OUT             0  iocontrol.0.tool-prep-number ==> tool-number
+     5  s32   OUT             0  iocontrol.0.tool-prep-pocket
+     5  bit   OUT         FALSE  iocontrol.0.tool-prepare ==> tool-prepare-loopback
+     5  bit   IN          FALSE  iocontrol.0.tool-prepared <== tool-prepare-loopback
+     5  bit   OUT         FALSE  iocontrol.0.user-enable-out ==> estop-out
+     5  bit   OUT         FALSE  iocontrol.0.user-request-enable
+     9  s32   OUT           190  motion-command-handler.time
+     9  s32   OUT          5240  motion-controller.time
+     9  float IN              1  motion.adaptive-feed
+     9  float IN              0  motion.analog-in-00
+     9  float IN              0  motion.analog-in-01
+     9  float IN              0  motion.analog-in-02
+     9  float IN              0  motion.analog-in-03
+     9  float OUT             0  motion.analog-out-00
+     9  float OUT             0  motion.analog-out-01
+     9  float OUT             0  motion.analog-out-02
+     9  float OUT             0  motion.analog-out-03
+     9  bit   OUT         FALSE  motion.coord-error
+     9  bit   OUT          TRUE  motion.coord-mode
+     9  float OUT             0  motion.current-vel
+     9  bit   IN          FALSE  motion.digital-in-00
+     9  bit   IN          FALSE  motion.digital-in-01
+     9  bit   IN          FALSE  motion.digital-in-02
+     9  bit   IN          FALSE  motion.digital-in-03
+     9  bit   OUT         FALSE  motion.digital-out-00
+     9  bit   OUT         FALSE  motion.digital-out-01
+     9  bit   OUT         FALSE  motion.digital-out-02
+     9  bit   OUT         FALSE  motion.digital-out-03
+     9  float OUT             0  motion.distance-to-go
+     9  bit   IN           TRUE  motion.enable
+     9  bit   IN          FALSE  motion.feed-hold <== feedhold
+     9  bit   IN          FALSE  motion.feed-inhibit
+     9  bit   OUT          TRUE  motion.in-position
+     9  bit   OUT         FALSE  motion.motion-enabled
+     9  s32   OUT             0  motion.motion-type
+     9  bit   OUT         FALSE  motion.on-soft-limit
+     9  bit   IN           TRUE  motion.probe-input <== probe
+     9  s32   OUT             0  motion.program-line
+     9  float OUT             0  motion.requested-vel
+     9  bit   IN           TRUE  motion.spindle-at-speed
+     9  bit   OUT          TRUE  motion.spindle-brake
+     9  bit   OUT         FALSE  motion.spindle-forward ==> spindle-cw
+     9  bit   I/O         FALSE  motion.spindle-index-enable
+     9  bit   IN          FALSE  motion.spindle-inhibit
+     9  bit   IN          FALSE  motion.spindle-is-oriented
+     9  bit   OUT         FALSE  motion.spindle-locked
+     9  bit   OUT         FALSE  motion.spindle-on
+     9  bit   OUT         FALSE  motion.spindle-orient
+     9  float OUT             0  motion.spindle-orient-angle
+     9  s32   IN              0  motion.spindle-orient-fault
+     9  s32   OUT             0  motion.spindle-orient-mode
+     9  bit   OUT         FALSE  motion.spindle-reverse ==> spindle-ccw
+     9  float IN              0  motion.spindle-revs
+     9  float OUT             0  motion.spindle-speed-cmd-rps
+     9  float IN              0  motion.spindle-speed-in
+     9  float OUT             0  motion.spindle-speed-out ==> spindle-cmd
+     9  float OUT             0  motion.spindle-speed-out-abs
+     9  float OUT             0  motion.spindle-speed-out-rps
+     9  float OUT             0  motion.spindle-speed-out-rps-abs
+     9  bit   OUT         FALSE  motion.teleop-mode
+     9  float OUT             0  motion.tooloffset.a
+     9  float OUT             0  motion.tooloffset.b
+     9  float OUT             0  motion.tooloffset.c
+     9  float OUT             0  motion.tooloffset.u
+     9  float OUT             0  motion.tooloffset.v
+     9  float OUT             0  motion.tooloffset.w
+     9  float OUT             0  motion.tooloffset.x
+     9  float OUT             0  motion.tooloffset.y
+     9  float OUT             0  motion.tooloffset.z
+    12  bit   IN          FALSE  parport.0.pin-01-out <== spindle-cw
+    12  bit   IN          FALSE  parport.0.pin-02-out <== xdir
+    12  bit   IN          FALSE  parport.0.pin-03-out <== xstep
+    12  bit   IN          FALSE  parport.0.pin-04-out <== ydir
+    12  bit   IN          FALSE  parport.0.pin-05-out <== ystep
+    12  bit   IN          FALSE  parport.0.pin-06-out <== zdir
+    12  bit   IN          FALSE  parport.0.pin-07-out <== zstep
+    12  bit   IN          FALSE  parport.0.pin-08-out <== adir
+    12  bit   IN          FALSE  parport.0.pin-09-out <== astep
+    12  bit   OUT         FALSE  parport.0.pin-10-in
+    12  bit   OUT          TRUE  parport.0.pin-10-in-not ==> estop-ext
+    12  bit   OUT         FALSE  parport.0.pin-11-in ==> both-home-y
+    12  bit   OUT          TRUE  parport.0.pin-11-in-not
+    12  bit   OUT         FALSE  parport.0.pin-12-in ==> both-home-x
+    12  bit   OUT          TRUE  parport.0.pin-12-in-not
+    12  bit   OUT         FALSE  parport.0.pin-13-in ==> both-home-z
+    12  bit   OUT          TRUE  parport.0.pin-13-in-not
+    12  bit   IN          FALSE  parport.0.pin-14-out <== spindle-ccw
+    12  bit   OUT          TRUE  parport.0.pin-15-in ==> airpresure
+    12  bit   OUT         FALSE  parport.0.pin-15-in-not
+    12  bit   IN          FALSE  parport.0.pin-16-out
+    12  bit   IN          FALSE  parport.0.pin-17-out <== charge-pump
+    12  s32   OUT          3940  parport.0.read.time
+    12  s32   OUT           140  parport.0.reset.time
+    12  s32   OUT          6580  parport.0.write.time
+    12  bit   IN          FALSE  parport.1.pin-01-out <== coolant-flood
+    12  bit   OUT          TRUE  parport.1.pin-02-in
+    12  bit   OUT         FALSE  parport.1.pin-02-in-not
+    12  bit   OUT          TRUE  parport.1.pin-03-in
+    12  bit   OUT         FALSE  parport.1.pin-03-in-not
+    12  bit   OUT          TRUE  parport.1.pin-04-in
+    12  bit   OUT         FALSE  parport.1.pin-04-in-not
+    12  bit   OUT          TRUE  parport.1.pin-05-in
+    12  bit   OUT         FALSE  parport.1.pin-05-in-not
+    12  bit   OUT          TRUE  parport.1.pin-06-in
+    12  bit   OUT         FALSE  parport.1.pin-06-in-not
+    12  bit   OUT          TRUE  parport.1.pin-07-in
+    12  bit   OUT         FALSE  parport.1.pin-07-in-not
+    12  bit   OUT          TRUE  parport.1.pin-08-in
+    12  bit   OUT         FALSE  parport.1.pin-08-in-not
+    12  bit   OUT          TRUE  parport.1.pin-09-in
+    12  bit   OUT         FALSE  parport.1.pin-09-in-not
+    12  bit   OUT         FALSE  parport.1.pin-10-in ==> feedhold
+    12  bit   OUT          TRUE  parport.1.pin-10-in-not
+    12  bit   OUT          TRUE  parport.1.pin-11-in
+    12  bit   OUT         FALSE  parport.1.pin-11-in-not
+    12  bit   OUT          TRUE  parport.1.pin-12-in
+    12  bit   OUT         FALSE  parport.1.pin-12-in-not
+    12  bit   OUT          TRUE  parport.1.pin-13-in ==> probe
+    12  bit   OUT         FALSE  parport.1.pin-13-in-not
+    12  bit   IN          FALSE  parport.1.pin-14-out <== coolant-mist
+    12  bit   OUT          TRUE  parport.1.pin-15-in
+    12  bit   OUT         FALSE  parport.1.pin-15-in-not
+    12  bit   IN          FALSE  parport.1.pin-16-out
+    12  bit   IN          FALSE  parport.1.pin-17-out
+    12  s32   OUT          6610  parport.1.read.time
+    12  s32   OUT             0  parport.1.reset.time
+    12  s32   OUT          2440  parport.1.write.time
+    12  s32   OUT             0  parport.read-all.time
+    12  s32   OUT             0  parport.write-all.time
+    25  bit   OUT         FALSE  probe.auto_rott
+    25  float OUT             5  probe.ps_edge_lenght
+    25  float OUT             0  probe.ps_error
+    25  float OUT             0  probe.ps_offs_angle
+    25  float OUT             0  probe.ps_offs_x
+    25  float OUT             0  probe.ps_offs_y
+    25  float OUT             0  probe.ps_offs_z
+    25  float OUT             2  probe.ps_probe_diam
+    25  float OUT           0.5  probe.ps_probe_latch
+    25  float OUT             1  probe.ps_probe_max
+    25  float OUT            10  probe.ps_probevel
+    25  float OUT           300  probe.ps_searchvel
+    25  float OUT             5  probe.ps_xy_clearance
+    25  float OUT             3  probe.ps_z_clearance
+    25  bit   OUT         FALSE  probe.set_zero
+    20  bit   IN           TRUE  pyvcp.airpresure <== airpresure
+    20  bit   IN          FALSE  pyvcp.feedhold <== feedhold
+    20  float IN              0  pyvcp.spindle-speed <== absolute-spindle-vel
+    11  s32   OUT          6350  servo-thread.time
+    13  s32   OUT             0  stepgen.0.counts
+    13  bit   OUT         FALSE  stepgen.0.dir ==> xdir
+    13  bit   IN          FALSE  stepgen.0.enable <== xenable
+    13  float IN              0  stepgen.0.position-cmd <== xpos-cmd
+    13  float OUT             0  stepgen.0.position-fb ==> xpos-fb
+    13  bit   OUT         FALSE  stepgen.0.step ==> xstep
+    13  s32   OUT             0  stepgen.1.counts
+    13  bit   OUT         FALSE  stepgen.1.dir ==> ydir
+    13  bit   IN          FALSE  stepgen.1.enable <== yenable
+    13  float IN              0  stepgen.1.position-cmd <== ypos-cmd
+    13  float OUT             0  stepgen.1.position-fb ==> ypos-fb
+    13  bit   OUT         FALSE  stepgen.1.step ==> ystep
+    13  s32   OUT             0  stepgen.2.counts
+    13  bit   OUT         FALSE  stepgen.2.dir ==> zdir
+    13  bit   IN          FALSE  stepgen.2.enable <== zenable
+    13  float IN              0  stepgen.2.position-cmd <== zpos-cmd
+    13  float OUT             0  stepgen.2.position-fb ==> zpos-fb
+    13  bit   OUT         FALSE  stepgen.2.step ==> zstep
+    13  s32   OUT           350  stepgen.capture-position.time
+    13  s32   OUT           320  stepgen.make-pulses.time
+    13  s32   OUT           380  stepgen.update-freq.time
+
+Pin Aliases:
+ Alias                                            Original Name
+
+Signals:
+Type          Value  Name     (linked to)
+float             0  absolute-spindle-vel
+                         <== abs.0.out
+                         ==> pyvcp.spindle-speed
+bit           FALSE  adir
+                         ==> parport.0.pin-08-out
+bit            TRUE  airpresure
+                         <== parport.0.pin-15-in
+                         ==> pyvcp.airpresure
+bit           FALSE  astep
+                         ==> parport.0.pin-09-out
+bit           FALSE  both-home-x
+                         ==> axis.0.home-sw-in
+                         ==> axis.0.neg-lim-sw-in
+                         ==> axis.0.pos-lim-sw-in
+                         <== parport.0.pin-12-in
+bit           FALSE  both-home-y
+                         ==> axis.1.home-sw-in
+                         ==> axis.1.neg-lim-sw-in
+                         ==> axis.1.pos-lim-sw-in
+                         <== parport.0.pin-11-in
+bit           FALSE  both-home-z
+                         ==> axis.2.home-sw-in
+                         ==> axis.2.neg-lim-sw-in
+                         ==> axis.2.pos-lim-sw-in
+                         <== parport.0.pin-13-in
+bit           FALSE  ccw
+                         ==> halui.spindle.reverse
+bit           FALSE  charge-pump
+                         <== charge-pump.out
+                         ==> parport.0.pin-17-out
+bit           FALSE  coolant-flood
+                         <== iocontrol.0.coolant-flood
+                         ==> parport.1.pin-01-out
+bit           FALSE  coolant-mist
+                         <== iocontrol.0.coolant-mist
+                         ==> parport.1.pin-14-out
+bit           FALSE  cw
+                         ==> halui.spindle.forward
+bit            TRUE  estop-ext
+                         ==> iocontrol.0.emc-enable-in
+                         <== parport.0.pin-10-in-not
+bit           FALSE  estop-out
+                         <== iocontrol.0.user-enable-out
+bit           FALSE  feedhold
+                         ==> motion.feed-hold
+                         <== parport.1.pin-10-in
+                         ==> pyvcp.feedhold
+bit           FALSE  pgmrun1
+                         <== halui.program.is-running
+bit            TRUE  probe
+                         ==> motion.probe-input
+                         <== parport.1.pin-13-in
+bit           FALSE  spindle-ccw
+                         <== motion.spindle-reverse
+                         ==> parport.0.pin-14-out
+float             0  spindle-cmd
+                         ==> abs.0.in
+                         <== motion.spindle-speed-out
+bit           FALSE  spindle-cw
+                         <== motion.spindle-forward
+                         ==> parport.0.pin-01-out
+bit           FALSE  tool-change
+                         ==> hal_manualtoolchange.change
+                         <== iocontrol.0.tool-change
+bit           FALSE  tool-changed
+                         <== hal_manualtoolchange.changed
+                         ==> iocontrol.0.tool-changed
+s32               0  tool-number
+                         ==> hal_manualtoolchange.number
+                         <== iocontrol.0.tool-prep-number
+bit           FALSE  tool-prepare-loopback
+                         <== iocontrol.0.tool-prepare
+                         ==> iocontrol.0.tool-prepared
+bit           FALSE  xdir
+                         ==> parport.0.pin-02-out
+                         <== stepgen.0.dir
+bit           FALSE  xenable
+                         <== axis.0.amp-enable-out
+                         ==> stepgen.0.enable
+float             0  xpos-cmd
+                         <== axis.0.motor-pos-cmd
+                         ==> stepgen.0.position-cmd
+float             0  xpos-fb
+                         ==> axis.0.motor-pos-fb
+                         <== stepgen.0.position-fb
+bit           FALSE  xstep
+                         ==> parport.0.pin-03-out
+                         <== stepgen.0.step
+bit           FALSE  ydir
+                         ==> parport.0.pin-04-out
+                         <== stepgen.1.dir
+bit           FALSE  yenable
+                         <== axis.1.amp-enable-out
+                         ==> stepgen.1.enable
+float             0  ypos-cmd
+                         <== axis.1.motor-pos-cmd
+                         ==> stepgen.1.position-cmd
+float             0  ypos-fb
+                         ==> axis.1.motor-pos-fb
+                         <== stepgen.1.position-fb
+bit           FALSE  ystep
+                         ==> parport.0.pin-05-out
+                         <== stepgen.1.step
+bit           FALSE  zdir
+                         ==> parport.0.pin-06-out
+                         <== stepgen.2.dir
+bit           FALSE  zenable
+                         <== axis.2.amp-enable-out
+                         ==> stepgen.2.enable
+float             0  zpos-cmd
+                         <== axis.2.motor-pos-cmd
+                         ==> stepgen.2.position-cmd
+float             0  zpos-fb
+                         ==> axis.2.motor-pos-fb
+                         <== stepgen.2.position-fb
+bit           FALSE  zstep
+                         ==> parport.0.pin-07-out
+                         <== stepgen.2.step
+
+Parameters:
+Owner   Type  Dir         Value  Name
+    14  s32   RW          25360  abs.0.tmax
+    14  bit   RO          FALSE  abs.0.tmax-increased
+    10  s32   RW          41990  base-thread.tmax
+    15  s32   RW          17460  charge-pump.tmax
+    15  bit   RO          FALSE  charge-pump.tmax-increased
+     5  s32   RO              0  iocontrol.0.tool-prep-index
+     9  s32   RW          10370  motion-command-handler.tmax
+     9  bit   RO          FALSE  motion-command-handler.tmax-increased
+     9  s32   RW          56880  motion-controller.tmax
+     9  bit   RO          FALSE  motion-controller.tmax-increased
+     9  bit   RO          FALSE  motion.debug-bit-0
+     9  bit   RO          FALSE  motion.debug-bit-1
+     9  float RO              1  motion.debug-float-0
+     9  float RO              0  motion.debug-float-1
+     9  float RO              0  motion.debug-float-2
+     9  float RO              1  motion.debug-float-3
+     9  s32   RO              0  motion.debug-s32-0
+     9  s32   RO              0  motion.debug-s32-1
+     9  u32   RO     0x00191BF8  motion.servo.last-period
+     9  float RO         987318  motion.servo.last-period-ns
+    12  u32   RW     0x00000000  parport.0.debug1
+    12  u32   RW     0x00000000  parport.0.debug2
+    12  bit   RW          FALSE  parport.0.pin-01-out-invert
+    12  bit   RW          FALSE  parport.0.pin-01-out-reset
+    12  bit   RW           TRUE  parport.0.pin-02-out-invert
+    12  bit   RW          FALSE  parport.0.pin-02-out-reset
+    12  bit   RW           TRUE  parport.0.pin-03-out-invert
+    12  bit   RW           TRUE  parport.0.pin-03-out-reset
+    12  bit   RW          FALSE  parport.0.pin-04-out-invert
+    12  bit   RW          FALSE  parport.0.pin-04-out-reset
+    12  bit   RW           TRUE  parport.0.pin-05-out-invert
+    12  bit   RW           TRUE  parport.0.pin-05-out-reset
+    12  bit   RW           TRUE  parport.0.pin-06-out-invert
+    12  bit   RW          FALSE  parport.0.pin-06-out-reset
+    12  bit   RW           TRUE  parport.0.pin-07-out-invert
+    12  bit   RW           TRUE  parport.0.pin-07-out-reset
+    12  bit   RW          FALSE  parport.0.pin-08-out-invert
+    12  bit   RW          FALSE  parport.0.pin-08-out-reset
+    12  bit   RW           TRUE  parport.0.pin-09-out-invert
+    12  bit   RW           TRUE  parport.0.pin-09-out-reset
+    12  bit   RW          FALSE  parport.0.pin-14-out-invert
+    12  bit   RW          FALSE  parport.0.pin-14-out-reset
+    12  bit   RW          FALSE  parport.0.pin-16-out-invert
+    12  bit   RW          FALSE  parport.0.pin-16-out-reset
+    12  bit   RW          FALSE  parport.0.pin-17-out-invert
+    12  bit   RW          FALSE  parport.0.pin-17-out-reset
+    12  s32   RW          21530  parport.0.read.tmax
+    12  bit   RO          FALSE  parport.0.read.tmax-increased
+    12  u32   RW     0x000001F4  parport.0.reset-time
+    12  s32   RW          12100  parport.0.reset.tmax
+    12  bit   RO          FALSE  parport.0.reset.tmax-increased
+    12  s32   RW          29670  parport.0.write.tmax
+    12  bit   RO          FALSE  parport.0.write.tmax-increased
+    12  bit   RW          FALSE  parport.1.pin-01-out-invert
+    12  bit   RW          FALSE  parport.1.pin-01-out-reset
+    12  bit   RW          FALSE  parport.1.pin-14-out-invert
+    12  bit   RW          FALSE  parport.1.pin-14-out-reset
+    12  bit   RW          FALSE  parport.1.pin-16-out-invert
+    12  bit   RW          FALSE  parport.1.pin-16-out-reset
+    12  bit   RW          FALSE  parport.1.pin-17-out-invert
+    12  bit   RW          FALSE  parport.1.pin-17-out-reset
+    12  s32   RW          24800  parport.1.read.tmax
+    12  bit   RO          FALSE  parport.1.read.tmax-increased
+    12  s32   RW              0  parport.1.reset.tmax
+    12  bit   RO          FALSE  parport.1.reset.tmax-increased
+    12  s32   RW          20220  parport.1.write.tmax
+    12  bit   RO          FALSE  parport.1.write.tmax-increased
+    12  s32   RW              0  parport.read-all.tmax
+    12  bit   RO          FALSE  parport.read-all.tmax-increased
+    12  s32   RW              0  parport.write-all.tmax
+    12  bit   RO          FALSE  parport.write-all.tmax-increased
+    11  s32   RW          64230  servo-thread.tmax
+    13  u32   RW     0x000074A2  stepgen.0.dirhold
+    13  u32   RW     0x000074A2  stepgen.0.dirsetup
+    13  float RO              0  stepgen.0.frequency
+    13  float RW             18  stepgen.0.maxaccel
+    13  float RW              0  stepgen.0.maxvel
+    13  float RW          10000  stepgen.0.position-scale
+    13  s32   RO              0  stepgen.0.rawcounts
+    13  u32   RW     0x000074A2  stepgen.0.steplen
+    13  u32   RW     0x00000000  stepgen.0.stepspace
+    13  u32   RW     0x000074A2  stepgen.1.dirhold
+    13  u32   RW     0x000074A2  stepgen.1.dirsetup
+    13  float RO              0  stepgen.1.frequency
+    13  float RW             18  stepgen.1.maxaccel
+    13  float RW              0  stepgen.1.maxvel
+    13  float RW          10000  stepgen.1.position-scale
+    13  s32   RO              0  stepgen.1.rawcounts
+    13  u32   RW     0x000074A2  stepgen.1.steplen
+    13  u32   RW     0x00000000  stepgen.1.stepspace
+    13  u32   RW     0x000074A2  stepgen.2.dirhold
+    13  u32   RW     0x000074A2  stepgen.2.dirsetup
+    13  float RO              0  stepgen.2.frequency
+    13  float RW             18  stepgen.2.maxaccel
+    13  float RW              0  stepgen.2.maxvel
+    13  float RW          10000  stepgen.2.position-scale
+    13  s32   RO              0  stepgen.2.rawcounts
+    13  u32   RW     0x000074A2  stepgen.2.steplen
+    13  u32   RW     0x00000000  stepgen.2.stepspace
+    13  s32   RW           9220  stepgen.capture-position.tmax
+    13  bit   RO          FALSE  stepgen.capture-position.tmax-increased
+    13  s32   RW          17820  stepgen.make-pulses.tmax
+    13  bit   RO          FALSE  stepgen.make-pulses.tmax-increased
+    13  s32   RW          30660  stepgen.update-freq.tmax
+    13  bit   RO          FALSE  stepgen.update-freq.tmax-increased
+     9  float RO              0  tc.0.acc
+     9  float RO              0  tc.0.pos
+     9  float RO              0  tc.0.vel
+     9  float RO              0  tc.1.acc
+     9  float RO              0  tc.1.pos
+     9  float RO              0  tc.1.vel
+     9  float RO              0  tc.2.acc
+     9  float RO              0  tc.2.pos
+     9  float RO              0  tc.2.vel
+     9  float RO              0  tc.3.acc
+     9  float RO              0  tc.3.pos
+     9  float RO              0  tc.3.vel
+     9  u32   RO     0x00000000  traj.active_tc
+     9  float RO              0  traj.pos_out
+     9  float RO              0  traj.vel_out
+
+Parameter Aliases:
+ Alias                                            Original Name
+
+Exported Functions:
+Owner   CodeAddr  Arg       FP   Users  Name
+ 00014  f847b000  f8cc8660  YES      1   abs.0
+ 00015  f8d13000  f8cc8688  NO       1   charge-pump
+ 00009  f8e83980  00000000  YES      1   motion-command-handler
+ 00009  f8e86440  00000000  YES      1   motion-controller
+ 00012  f8572000  f8cc81a8  NO       1   parport.0.read
+ 00012  f85722a0  f8cc81a8  NO       1   parport.0.reset
+ 00012  f85723a0  f8cc81a8  NO       1   parport.0.write
+ 00012  f8572000  f8cc82b0  NO       1   parport.1.read
+ 00012  f85722a0  f8cc82b0  NO       0   parport.1.reset
+ 00012  f85723a0  f8cc82b0  NO       1   parport.1.write
+ 00012  f85720f0  f8cc81a8  NO       0   parport.read-all
+ 00012  f8572570  f8cc81a8  NO       0   parport.write-all
+ 00013  f8578350  f8cc83d8  YES      1   stepgen.capture-position
+ 00013  f8578000  f8cc83d8  NO       1   stepgen.make-pulses
+ 00013  f8578430  f8cc83d8  YES      1   stepgen.update-freq
+
+Realtime Threads:
+     Period  FP     Name               (     Time, Max-Time )
+     985314  YES          servo-thread (    14640,    64230 )
+                  1 stepgen.capture-position
+                  2 motion-command-handler
+                  3 motion-controller
+                  4 stepgen.update-freq
+                  5 abs.0
+      29858  NO            base-thread (    22350,    41990 )
+                  1 parport.0.read
+                  2 parport.1.read
+                  3 stepgen.make-pulses
+                  4 charge-pump
+                  5 parport.0.write
+                  6 parport.0.reset
+                  7 parport.1.write
+
