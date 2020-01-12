@@ -1,0 +1,34 @@
+; extend M0 to:
+; turn off spindle, flood, mist if optional stop = 1 and block delete is off
+;
+; on cycle restart:
+; turn on spindle
+; turn mist on if it was on before the m0
+; turn flood on if it was on before the m0
+
+o<extend_m0> sub
+(debug, extend_m0:)
+
+; record whether mist/flood were on
+#<mist> = #<_mist>
+#<flood> = #<_flood>
+
+/M5 M9 ; stop spindle, mist+flood off
+
+/m0 (refer to builtin m0)
+
+; restore mist, flood setting
+/o100 if [#<mist>]
+/      m7
+/o100 endif
+
+/o200 if [#<flood>]
+/      m8
+/o200 endif
+
+/M3 ; spindle on
+
+(debug, extend_m0 done)
+
+o<extend_m0> endsub
+m2

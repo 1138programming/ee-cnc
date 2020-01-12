@@ -1,2 +1,10 @@
 # Include your custom_postgui HAL commands here
 # This file will not be overwritten when you run PNCconf again
+
+
+# Execute tool change on toggle up
+net Toggle_Up_In => halui.mdi-command-00
+
+
+# Resume program on toggle down
+net Toggle_Down_In => halui.program.resume
